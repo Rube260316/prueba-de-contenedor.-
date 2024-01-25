@@ -1,0 +1,16 @@
+{
+    "name": "ML Dev Container",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+         "settings": {"terminal.integrated.shell.linux": "/bin/bash"},
+         "extensions": ["ms-python.python"]
+        }
+    },
+    "remoteUser": "vscode",
+    "runArgs": [
+      "--gpus", "all"
+    ],
+    "postCreateCommand": "jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root"
+ 
+}
